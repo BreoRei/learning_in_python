@@ -14,7 +14,7 @@ def get_number() -> int:
     exit()
 
 
-def is_it_simple_number(number):
+def is_it_simple_number(number) -> None:
     if number == 2:
         print("Число простое")
     else:
@@ -26,7 +26,7 @@ def is_it_simple_number(number):
             print("Число простое")
 
 
-def program():
+def program() -> None:
     number = get_number()
     is_it_simple_number(number)
 
