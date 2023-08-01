@@ -6,5 +6,6 @@
 
 ## homework №3 [фаил с заданиями](homework_3/INFO.md)
 
-## homework №3 [фаил с заданиями](homework_4/INFO.md)
+## homework №4 [фаил с заданиями](homework_4/INFO.md)
 
+## homework №5 [фаил с заданиями](homework_5/INFO.md)
