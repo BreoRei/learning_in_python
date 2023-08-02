@@ -14,24 +14,26 @@ MONTH = {'1': 'января',
          '11': 'ноября',
          '12': 'декабря'}
 
+START_GREGORIAN_CALENDAR = 1
+STOP_GREGORIAN_CALENDAR = 10000
+
 
 def check():
-    value, *_ = argv[1:]
-    lst_date = value.split('.')
-    if len(lst_date) == 3:
+    value = argv[1:]
+    if len(value) == 1:
         try:
-            datetime.strptime(value, '%d.%m.%Y')
-            print(f'Верный формат даты:\n{lst_date[0]} {MONTH.get(lst_date[1])} {lst_date[2]}')
-        except Exception:
-            print('Неверный формат даты')
-    elif len(lst_date) == 2:
-        try:
-            datetime.strptime(value, '%d.%m')
-            print(f'Верный формат даты:\n{lst_date[0]} {MONTH.get(lst_date[1])}')
+            day, monyh, year = value[0].split('.')
+            datetime.strptime(f'{day}.{monyh}', '%d.%m')
+            if START_GREGORIAN_CALENDAR <= int(year) < STOP_GREGORIAN_CALENDAR:
+                print(f'Верный формат даты:\n{day} {MONTH.get(monyh)} {year}')
+                return True
+            else:
+                print('Неверный формат даты')
         except Exception:
             print('Неверный формат даты')
     else:
         print('Неверный формат даты')
+    return False
 
 
 if __name__ == '__main__':
