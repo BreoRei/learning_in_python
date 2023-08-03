@@ -1,4 +1,4 @@
-_initial_share_price: dict[str: int] = {}
+_initial_share_price: dict[str: float] = {}
 
 
 def print_txt(txt):
@@ -18,7 +18,7 @@ def calculate_portfolio_value(stocks: dict, prices: dict) -> float:
     portfolio_sum: float = 0
     for key, value in stocks.items():
         portfolio_sum += value*prices.get(key)
-    return portfolio_sum
+    return round(portfolio_sum, 2)
 
 
 @print_txt('Доходность портфеля в %: ')
