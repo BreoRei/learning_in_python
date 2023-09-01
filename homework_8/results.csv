@@ -1,0 +1,5 @@
+name,parent,type,size
+homework_1,learning_in_python,root-directory,4747
+task_1.py,homework_1,file,2208
+task_2.py,homework_1,file,994
+INFO.md,homework_1,file,1545

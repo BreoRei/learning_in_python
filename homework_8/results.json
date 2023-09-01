@@ -1,0 +1,26 @@
+[
+    {
+        "name": "homework_1",
+        "parent": "learning_in_python",
+        "type": "root-directory",
+        "size": 4747
+    },
+    {
+        "name": "task_1.py",
+        "parent": "homework_1",
+        "type": "file",
+        "size": 2208
+    },
+    {
+        "name": "task_2.py",
+        "parent": "homework_1",
+        "type": "file",
+        "size": 994
+    },
+    {
+        "name": "INFO.md",
+        "parent": "homework_1",
+        "type": "file",
+        "size": 1545
+    }
+]
