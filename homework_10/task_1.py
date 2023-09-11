@@ -40,30 +40,21 @@ class Fish(Animal):
 
 
 class Factory:
-    def __call__(self, type_animal, *args):
-        param = args[0]
-        if type_animal in "Cat":
-            return Cat(name=param.get('name'),
-                       age=param.get('age'),
-                       color=param.get('color'),
-                       breed=param.get('breed'),
-                       life=param.get('life'))
-        elif type_animal in "Dog":
-            return Dog(name=param.get('name'),
-                       age=param.get('age'),
-                       color=param.get('color'),
-                       breed=param.get('breed'))
-        elif type_animal in "Fish":
-            return Fish(name=param.get('name'),
-                        age=param.get('age'),
-                        predator=param.get('predator'))
+    animals = {
+        'dog': Dog,
+        'cat': Cat,
+        'fish': Fish
+    }
+
+    def clone(self, name, *args, **kwargs):
+        return self.animals.get(name)(*args, **kwargs)
 
 
 if __name__ == '__main__':
-    factory = Factory()
-    one = factory('Dog', {'name': 'туман', 'age': 3, 'color': 'серый', 'breed': 'овчарка'})
-    two = factory("Cat", {'name': 'ночка', 'age': 1, 'color': 'белый', 'breed': 'сиамская', 'life': 4})
-    three = factory("Fish", {'name': 'пиранья', 'age': 3, 'predator': True})
-    four = factory("Dog", {'name': 'туман', 'age': 3, 'color': 'серый', 'breed': 'дог'})
+    f = Factory()
+    one = f.clone('dog', 'туман', 3, 'серый', 'овчарка')
+    two = f.clone('cat', 'ночка', 1, 'белый', 'сиамская', 4)
+    three = f.clone('fish', 'пиранья', 3, True)
+    four = f.clone('dog', 'туман', 3, 'серый', 'дог')
     print(one, two, three, four, sep='\n')
 
