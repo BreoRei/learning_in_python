@@ -17,3 +17,5 @@
 ## homework №9 [фаил с заданиями](homework_9/INFO.md)
 
 ## homework №10 [фаил с заданиями](homework_10/INFO.md)
+
+## homework №11 [фаил с заданиями](homework_11/INFO.md)
