@@ -12,10 +12,10 @@ class Matrix:
         return f'матрица = {self.matrix_values}'
 
     def __add__(self, other):
-        return np.array(self.matrix_values) + np.array(other.matrix_values)
+        return Matrix(np.array(self.matrix_values) + np.array(other.matrix_values))
 
     def __mul__(self, other):
-        return np.array(self.matrix_values).dot(np.array(other.matrix_values))
+        return Matrix(np.array(self.matrix_values).dot(np.array(other.matrix_values)))
 
     def __eq__(self, other):
         return self.matrix_values == other.matrix_values
@@ -42,6 +42,7 @@ if __name__ == '__main__':
     m2 = Matrix(arr1)
     print(f'{m = }')
     print(m)
+
     print('Сравнение:')
     print(f'{m = } == {m2 = }: {m == m2}')
     print(f'{m1 = } == {m2 = }: {m1 == m2}')
@@ -49,9 +50,10 @@ if __name__ == '__main__':
     print(f'{m1 = } < {m2 = }: {m1 < m2}')
     print(f'{m = } > {m2 = }: {m > m2}')
     print(f'{m1 = } > {m2 = }: {m1 > m2}')
+
     print('Сложение:')
     print(f'{m1 + m2 = }')
-    print(m1)
+
     print('Умножение:')
     print(f'{m * m2 = }')
     print(f'{m1 * m2 = }')
