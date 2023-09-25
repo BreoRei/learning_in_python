@@ -1,8 +1,3 @@
-# Возьмите 1-3 задания из тех, что были на прошлых семинарах или в домашних заданиях. Напишите к ним тесты.
-# 2-5 тестов на задание в трёх вариантах:
-# - unittest,
-# - pytest.
-
 import unittest
 from matrix import Matrix
 
@@ -19,7 +14,7 @@ class TestCleanText(unittest.TestCase):
     def test_step_2_gt(self):
         self.assertTrue(self.m1 > self.m3)
 
-    def test_step_2_lt(self):
+    def test_step_3_lt(self):
         self.assertTrue(self.m3 < self.m2)
         self.assertFalse(self.m2 < self.m1)
 
